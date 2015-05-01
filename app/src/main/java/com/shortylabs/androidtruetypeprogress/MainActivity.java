@@ -15,7 +15,9 @@ import android.widget.Button;
 public class MainActivity extends Activity implements View.OnClickListener {
 
     private Button mSnowBtn;
+    public static final String IS_SNOWING = "mIsSnowing";
     public static final String SNOW_PROGRESS_FRAGMENT = "snowProgressFragment";
+    private boolean mIsSnowing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mSnowBtn.setOnClickListener(this);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(IS_SNOWING, mIsSnowing);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mIsSnowing = savedInstanceState.getBoolean(IS_SNOWING);
+        if (mIsSnowing) {
+            showProgress();
+            snow();
+
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,6 +83,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void snow() {
+        mIsSnowing = true;
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
@@ -76,6 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void stopSnow() {
+        mIsSnowing = false;
         hideProgress();
     }
 

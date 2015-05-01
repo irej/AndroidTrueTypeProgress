@@ -11,8 +11,6 @@ import android.view.Window;
 import android.widget.TextView;
 
 
-
-
 /**
  */
 public class ProgressDialogFragment extends DialogFragment {
@@ -23,7 +21,6 @@ public class ProgressDialogFragment extends DialogFragment {
     public ProgressDialogFragment() {
         // Required empty public constructor
     }
-
 
 
     @Override
@@ -37,8 +34,8 @@ public class ProgressDialogFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // modal and no title bar
-        setStyle(DialogFragment.STYLE_NORMAL|DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Translucent);
-
+        setStyle(DialogFragment.STYLE_NORMAL | DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Translucent);
+        setRetainInstance(true);
     }
 
     @Override
@@ -47,10 +44,10 @@ public class ProgressDialogFragment extends DialogFragment {
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-        int width = metrics.widthPixels /2;
+        int width = metrics.widthPixels / 2;
 
         Window window = getDialog().getWindow();
-        window.setLayout(width,width);
+        window.setLayout(width, width);
         window.setGravity(Gravity.CENTER);
 
 

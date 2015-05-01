@@ -64,7 +64,6 @@
             android:text="{" />
 
 
-
     </ViewFlipper>
 
 </RelativeLayout>
