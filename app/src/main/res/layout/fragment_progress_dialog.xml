@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context="com.seedonk.seedonkandroid.fragment.ProgressDialogFragment">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:autoStart="true"
+        android:flipInterval="500"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        android:visibility="visible">
+
+        <!-- replace these SirucaTextViews with ones for the heart origami glyphs when available -->
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_0"
+            style="@style/progressAnimationIconTextView_1"
+            android:text="0" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_1"
+            style="@style/progressAnimationIconTextView_2"
+            android:text="3" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_2"
+            style="@style/progressAnimationIconTextView_3"
+            android:text="6" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_3"
+            style="@style/progressAnimationIconTextView_1"
+            android:text="Z" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_4"
+            style="@style/progressAnimationIconTextView_2"
+            android:text="y" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_5"
+            style="@style/progressAnimationIconTextView_3"
+            android:text="/" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_6"
+            style="@style/progressAnimationIconTextView_1"
+            android:text="[" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_7"
+            style="@style/progressAnimationIconTextView_2"
+            android:text="A" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_8"
+            style="@style/progressAnimationIconTextView_3"
+            android:text="{" />
+
+
+
+    </ViewFlipper>
+
+</RelativeLayout>
