@@ -10,20 +10,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private Button mLoginBtn;
-    public static final String LOGIN_PROGRESS_FRAGMENT = "loginProgressFragment";
+    private Button mSnowBtn;
+    public static final String SNOW_PROGRESS_FRAGMENT = "snowProgressFragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mLoginBtn = (Button) findViewById(R.id.login_button);
-        mLoginBtn.setOnClickListener(this);
+        mSnowBtn = (Button) findViewById(R.id.snow_button);
+        mSnowBtn.setOnClickListener(this);
     }
 
 
@@ -56,29 +55,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.login_button:
-                // pseudo login
+            case R.id.snow_button:
+                // pseudo snow
                 showProgress();
-                login();
+                snow();
                 break;
         }
 
     }
 
-    private void login() {
+    private void snow() {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                loginSuccess();
+                stopSnow();
             }
         }, 10000);
 
 
     }
 
-    private void loginSuccess() {
+    private void stopSnow() {
         hideProgress();
-        Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_LONG).show();
     }
 
 
@@ -87,7 +85,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void showProgress() {
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Fragment prev = getFragmentManager().findFragmentByTag(LOGIN_PROGRESS_FRAGMENT);
+        Fragment prev = getFragmentManager().findFragmentByTag(SNOW_PROGRESS_FRAGMENT);
         if (prev != null) {
             ft.remove(prev);
         }
@@ -95,13 +93,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         // Create and show the dialog.
         DialogFragment newFragment = new ProgressDialogFragment();
-        newFragment.show(ft, LOGIN_PROGRESS_FRAGMENT);
+        newFragment.show(ft, SNOW_PROGRESS_FRAGMENT);
     }
 
     public void hideProgress() {
 
         DialogFragment dialogFragment = (DialogFragment) getFragmentManager().findFragmentByTag(
-                LOGIN_PROGRESS_FRAGMENT);
+                SNOW_PROGRESS_FRAGMENT);
         if (dialogFragment != null) {
             dialogFragment.dismiss();
         }
