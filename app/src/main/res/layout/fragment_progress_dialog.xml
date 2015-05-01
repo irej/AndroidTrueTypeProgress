@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    tools:context="com.seedonk.seedonkandroid.fragment.ProgressDialogFragment">
+    tools:context="com.shortylabs.fragment.ProgressDialogFragment">
 
     <ViewFlipper
         android:id="@+id/viewFlipper"
@@ -17,7 +17,6 @@
         android:outAnimation="@android:anim/fade_out"
         android:visibility="visible">
 
-        <!-- replace these SirucaTextViews with ones for the heart origami glyphs when available -->
 
         <com.shortylabs.androidtruetypeprogress.FontTextView
             android:id="@+id/image_0"
