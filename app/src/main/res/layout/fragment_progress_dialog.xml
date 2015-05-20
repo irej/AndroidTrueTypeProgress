@@ -35,17 +35,17 @@
 
         <com.shortylabs.androidtruetypeprogress.FontTextView
             android:id="@+id/image_3"
-            style="@style/progressAnimationIconTextView_1"
+            style="@style/progressAnimationIconTextView_4"
             android:text="Z" />
 
         <com.shortylabs.androidtruetypeprogress.FontTextView
             android:id="@+id/image_4"
-            style="@style/progressAnimationIconTextView_2"
+            style="@style/progressAnimationIconTextView_3"
             android:text="y" />
 
         <com.shortylabs.androidtruetypeprogress.FontTextView
             android:id="@+id/image_5"
-            style="@style/progressAnimationIconTextView_3"
+            style="@style/progressAnimationIconTextView_2"
             android:text="/" />
 
         <com.shortylabs.androidtruetypeprogress.FontTextView
@@ -61,6 +61,11 @@
         <com.shortylabs.androidtruetypeprogress.FontTextView
             android:id="@+id/image_8"
             style="@style/progressAnimationIconTextView_3"
+            android:text="{" />
+
+        <com.shortylabs.androidtruetypeprogress.FontTextView
+            android:id="@+id/image_9"
+            style="@style/progressAnimationIconTextView_4"
             android:text="{" />
 
 

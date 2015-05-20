@@ -26,13 +26,10 @@ public class FontTextView extends TextView {
     }
 
     private void init(Context context) {
-        // Typeface.createFromAsset doesn't work in the layout editor. Skipping ...
         if (isInEditMode()) {
             return;
         }
 
-//        Typeface tf = Typeface.createFromAsset(context.getAssets(),
-//                "fonts/SirucaPictograms1.1_.ttf");
         Typeface tf = Typeface.createFromAsset(context.getAssets(),
                 "fonts/fauxsnow.ttf");
         setTypeface(tf, 1);
