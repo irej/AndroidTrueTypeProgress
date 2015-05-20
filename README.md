@@ -10,6 +10,8 @@ The progress dialog layout, fragment_progress_dialog.xml, contains a ViewFlipper
 
 The MainActivity has a button to show the progress dialog for 10 seconds.
 
+![Screenshot](https://github.com/irej/AndroidTrueTypeProgress/blob/develop/screenshot.png "Screenshot")
+
 The sample program uses Brian Kent's Faux Snow font
 http://www.fontsquirrel.com/license/Faux-Snow-BRK
 
